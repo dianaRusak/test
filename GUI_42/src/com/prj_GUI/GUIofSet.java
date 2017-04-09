@@ -28,8 +28,8 @@ public class GUIofSet extends JFrame {
                 JFileChooser fopen = new JFileChooser();
                 fopen.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
                 fopen.setAcceptAllFileFilterUsed(false);
-
-                int ret = fopen.showDialog(null, "Select directory");
+                fopen.setMultiSelectionEnabled(false);
+                int ret = fopen.showDialog(null, "Directory selection");
                 switch (ret){
                     case JFileChooser.APPROVE_OPTION:
                         String TempPath = textField1.getText();

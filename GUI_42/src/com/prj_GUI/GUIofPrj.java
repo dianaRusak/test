@@ -68,6 +68,20 @@ public class GUIofPrj extends JFrame{
                 new GUIofSet(Settings);
             }
         });
+        Upload.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fopen = new JFileChooser();
+                fopen.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                fopen.setMultiSelectionEnabled(false);
+                int ret = fopen.showDialog(null, "File Selection");
+                switch(ret){
+                    case JFileChooser.APPROVE_OPTION:
+                        //uploadFile(fopen.getSelectedFile().getAbsolutePath());
+
+                }
+            }
+        });
 
     }
     private static void BtnInitialize(JButton btn){
